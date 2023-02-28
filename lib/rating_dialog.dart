@@ -167,14 +167,16 @@ class _RatingDialogState extends State<RatingDialog> {
       ],
     );
 
-    return AlertDialog(
-      backgroundColor: Color(0xff212121),
-      titlePadding: EdgeInsets.zero,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.zero,
+    return Theme(
+      data: ThemeData.dark(),
+      child: AlertDialog(
+        titlePadding: EdgeInsets.zero,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.zero,
+        ),
+        scrollable: true,
+        title: _content,
       ),
-      scrollable: true,
-      title: _content,
     );
   }
 }
