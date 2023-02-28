@@ -86,7 +86,7 @@ class _RatingDialogState extends State<RatingDialog> {
       alignment: Alignment.topRight,
       children: <Widget>[
         ClipRRect(
-          borderRadius: BorderRadius.circular(20.0),
+          borderRadius: BorderRadius.zero,
           child: Padding(
             padding: const EdgeInsets.fromLTRB(25, 30, 25, 5),
             child: Column(
@@ -168,10 +168,11 @@ class _RatingDialogState extends State<RatingDialog> {
     );
 
     return AlertDialog(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15.0),
-      ),
+      backgroundColor: Color(0xff212121),
       titlePadding: EdgeInsets.zero,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.zero,
+      ),
       scrollable: true,
       title: _content,
     );
